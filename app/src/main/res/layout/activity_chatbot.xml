@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Welcome text -->
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Welcome to MediVault\nChatBot"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:lineSpacingExtra="8dp"/>
+
+    <!-- Chat messages -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_layout"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"/>
+
+    <!-- Bottom input bar -->
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bar_background"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Message input -->
+        <EditText
+            android:id="@+id/message_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Type your message"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="3"
+            android:background="@drawable/button"
+            android:padding="12dp"/>
+
+        <!-- Send button - now using ImageButton as originally intended -->
+        <ImageButton
+            android:id="@+id/send_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/button"
+            android:src="@drawable/ic_baseline_send_24"
+            android:contentDescription="Send"
+            android:scaleType="centerInside"
+            android:padding="12dp"/>
+    </LinearLayout>
+</RelativeLayout>

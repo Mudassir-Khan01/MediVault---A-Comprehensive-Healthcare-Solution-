@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "992353086133",
+    "firebase_url": "https://e-app-12089-default-rtdb.firebaseio.com",
+    "project_id": "e-app-12089",
+    "storage_bucket": "e-app-12089.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992353086133:android:01b665ac42d529d3d4acfc",
+        "android_client_info": {
+          "package_name": "com.geekymusketeers.medify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "992353086133-tsnbr23i4m1rdvem1c4c296kv752d3bu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.geekymusketeers.medify",
+            "certificate_hash": "128ab0b2f7dbddcbc4e4e04d11986dd34374b666"
+          }
+        },
+        {
+          "client_id": "992353086133-tsnbr23i4m1rdvem1c4c296kv752d3bu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.geekymusketeers.medify",
+            "certificate_hash": "128ab0b2f7dbddcbc4e4e04d11986dd34374b666"
+          }
+        },
+        {
+          "client_id": "992353086133-ilh4cr275re4u38ilk0cdjpuer1p7v29.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCo8cJxMjpt_uCemFubKlIsd6vPQFdJXCY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "992353086133-ilh4cr275re4u38ilk0cdjpuer1p7v29.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

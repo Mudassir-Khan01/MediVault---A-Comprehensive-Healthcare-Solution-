@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.geekymusketeers.mediVault">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/medivault_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/medivault_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Medify"
+        tools:targetApi="31">
+        <activity
+            android:name="com.geekymusketeers.mediVault.ui.auth.forgotPassword.ForgotPasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.geekymusketeers.mediVault.ui.profile.EditProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.geekymusketeers.mediVault.ui.profile.ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.geekymusketeers.mediVault.ui.mainFragments.settings.prescription.AddPrescriptionActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.geekymusketeers.mediVault.Enhancements.ChatBot.chatBot"
+            android:exported="true" />
+        <activity
+            android:name="com.geekymusketeers.mediVault.Enhancements.WaterIntake.WaterTrackerActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.geekymusketeers.mediVault.Enhancements.StepCounter.StepCounterActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.geekymusketeers.mediVault.Enhancements.BMI.BMICalculatorActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.geekymusketeers.mediVault.Enhancements.BMR.BMRCalculatorActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.geekymusketeers.mediVault.ui.mainFragments.settings.upi.UPImanager"
+            android:exported="true" />
+        <activity
+            android:name="com.geekymusketeers.mediVault.ui.introduction.Splashscreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.geekymusketeers.mediVault.ui.auth.signUpScreen.firstScreen.SignUpFirstScreen"
+            android:exported="true" />
+        <activity
+            android:name="com.geekymusketeers.mediVault.ui.auth.signInScreen.SignInScreen"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.geekymusketeers.mediVault.ui.auth.signUpScreen.SecondScreen.SignUpSecondScreen"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.geekymusketeers.mediVault.ui.HomeActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

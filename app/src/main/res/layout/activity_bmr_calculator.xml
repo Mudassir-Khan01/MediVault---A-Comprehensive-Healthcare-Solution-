@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/gradient_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:src="@drawable/bmr"
+            />
+
+        <!-- Header Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BMR Calculator"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="16dp"/>
+
+        <!-- Unit Selection Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="8dp">
+
+            <RadioGroup
+                android:id="@+id/radioGroupUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/radioMetric"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Metric"
+                    android:checked="true"
+                    android:textColor="@color/black"
+                    android:buttonTint="@color/dull_blue"
+                    android:background="@drawable/button"
+                    android:padding="12dp"
+                    android:layout_marginEnd="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/radioImperial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Imperial"
+                    android:background="@drawable/button"
+                    android:textColor="@color/black"
+                    android:buttonTint="@color/dull_blue"
+                    android:layout_marginStart="8dp"
+                    android:padding="12dp"
+                    />
+            </RadioGroup>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Gender Selection Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="8dp">
+
+            <RadioGroup
+                android:id="@+id/radioGroupGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Male"
+                    android:checked="true"
+                    android:background="@drawable/button"
+                    android:textColor="@color/black"
+                    android:buttonTint="@color/dull_blue"
+                    android:layout_marginEnd="8dp"
+                    />
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Female"
+                    android:background="@drawable/button"
+                    android:textColor="@color/black"
+                    android:buttonTint="@color/dull_blue"
+                    android:layout_marginStart="8dp"/>
+            </RadioGroup>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Input Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Age Input -->
+                <EditText
+                    android:id="@+id/etAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Age"
+                    android:inputType="number"
+                    android:background="@drawable/bmi_progress"
+                    android:padding="12dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Weight Input -->
+                <EditText
+                    android:id="@+id/etWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Weight (kg/lbs)"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/bmi_progress"
+                    android:padding="12dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Height Input -->
+                <EditText
+                    android:id="@+id/etHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Height (cm/inches)"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/bmi_progress"
+                    android:padding="12dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Activity Level Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <Spinner
+                    android:id="@+id/spinnerActivityLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Calculate Button -->
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate BMR - TDEE"
+            android:backgroundTint="@color/black"
+            android:textColor="@android:color/white"
+            android:background="@drawable/primary_button"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Results Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- BMR Result -->
+                <TextView
+                    android:id="@+id/tvBMR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BMR: "
+                    android:textSize="18sp"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- TDEE Result -->
+                <TextView
+                    android:id="@+id/tvTDEE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TDEE: "
+                    android:textSize="18sp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>
