@@ -84,7 +84,7 @@ class chatBot : AppCompatActivity() {
         val body = RequestBody.create(JSON, jsonBody.toString())
         val request = Request.Builder()
             .url("https://api.openai.com/v1/chat/completions")
-            .header("Authorization", "Bearer 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") // replace with your key
+            .header("", "*") // replace with your key
             .post(body)
             .build()
 
